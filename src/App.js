@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import NotFound from "./pages/NotFound/NotFound";
 import Registrarse from "./pages/Registrarse/Registrarse";
 import Login from "./pages/Login/Login";
@@ -9,6 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
+        <Redirect exact from="/" to="/login" />
         <Route exact path="/registrarse" component={Registrarse} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/dashboard" component={Dashboard} />

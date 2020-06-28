@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Registrarse() {
+export default function SignUp() {
   const classes = useStyles();
 
   return (
