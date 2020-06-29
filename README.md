@@ -5,4 +5,4 @@ Este es un proyecto de la universidad, donde realizare una app web para aprender
 Se trabajara en React y Material ui.
 
 ## Preview
-https://reverent-shockley-c4d039.netlify.app/dashboard
+https://reverent-shockley-c4d039.netlify.app
