@@ -42,20 +42,11 @@ const Profile = (props) => {
   //const apellido = useSelector(state => state.user.user.datosUsuario.apellidos);
   //const cargo = useSelector(state => state.user.user.datosUsuario.empresa);
 
-  useEffect(() => {
-  }, [] );
-
   return (
     <div {...rest} className={clsx(classes.root, className)}>
       <Avatar alt="Person" className={classes.avatar} />
-      <Typography className={classes.name} variant="h3">
-        {infoUser.empresa}
-      </Typography>
-      <Typography className={classes.cargoStyle} variant="h6">
-        {infoUser.nombre}
-      </Typography>
-      <Typography className={classes.cargoStyle} variant="h6">
-        {infoUser.email}
+      <Typography className={classes.name} variant="h6">
+        Usuario
       </Typography>
     </div>
   );

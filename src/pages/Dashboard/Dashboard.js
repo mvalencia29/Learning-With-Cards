@@ -1,38 +1,80 @@
 import React from "react";
-import BottomNavigation from "@material-ui/core/BottomNavigation";
-import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import RestoreIcon from "@material-ui/icons/Restore";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import LocationOnIcon from "@material-ui/icons/LocationOn";
-import { makeStyles } from "@material-ui/core/styles";
 import Main from "../../layout/Main";
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from "@material-ui/core/Paper";
+import Grid from "@material-ui/core/Grid";
+import Skeleton from "@material-ui/lab/Skeleton";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
-    width: 500,
+    padding: theme.spacing(4),
+    background: "#f4f6f8",
   },
-});
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    display: 'flex'
+  },
+}));
 
 const Dashboard = () => {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
 
   return (
     <Main>
-      <BottomNavigation
-        value={value}
-        onChange={(event, newValue) => {
-          console.log(`event : ${event}`);
-          console.log(`newValue : ${newValue}`);
-          setValue(newValue);
-        }}
-        showLabels
-        className={classes.root}
-      >
-        <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
-        <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
-        <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-      </BottomNavigation>
+      <div className={classes.root}>
+        <Grid container spacing={3}>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          <Grid item xs={12}>
+            <Paper className={classes.paper} variant="outlined">
+              <Skeleton variant="circle" width="70px" height="70px" style={{ marginRight : 20 }} />
+              <Skeleton variant="rect" width="100%" height={70} />
+            </Paper>
+          </Grid>
+          
+        </Grid>
+      </div>
     </Main>
   );
 };

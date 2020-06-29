@@ -36,7 +36,6 @@ const Topbar = (props) => {
     <AppBar {...rest} className={clsx(classes.root, className)}>
       <Toolbar>
         <RouterLink to="/dashboard">
-          
         </RouterLink>
         <div className={classes.flexGrow}></div>
         <Hidden mdDown>
