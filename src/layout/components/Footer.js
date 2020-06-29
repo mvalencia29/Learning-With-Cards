@@ -21,7 +21,14 @@ const Footer = (props) => {
 
   return (
     <div {...rest} className={clsx(classes.root, className)}>
-      <Typography variant="body1">&copy; Learning With Cards .2020</Typography>
+      <Typography variant="body2" color="textSecondary" align="center">
+        {"Copyright © "}
+        <Link color="inherit" href="https://material-ui.com/">
+          Learning With Cards
+        </Link>{" "}
+        {new Date().getFullYear()}
+        {"."}
+      </Typography>
     </div>
   );
 };
