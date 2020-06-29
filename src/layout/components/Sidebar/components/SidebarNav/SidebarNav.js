@@ -1,6 +1,6 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/display-name */
-import React, { forwardRef, useEffect, useState } from "react";
+import React, { forwardRef } from "react";
 import { NavLink as RouterLink, useHistory } from "react-router-dom";
 import clsx from "clsx";
 import PropTypes from "prop-types";
@@ -8,9 +8,11 @@ import { makeStyles } from "@material-ui/styles";
 import { List, ListItem, Button, colors, Hidden } from "@material-ui/core";
 
 //Iconos Slider
-import DashboardIcon from "@material-ui/icons/Dashboard";
-import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import HomeIcon from '@material-ui/icons/Home';
+import SearchIcon from '@material-ui/icons/Search';
+import ViewModuleIcon from '@material-ui/icons/ViewModule';
+import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 
 const useStyles = makeStyles((theme) => ({
   root: {},
@@ -73,12 +75,12 @@ const SidebarNav = (props) => {
           to="/dashboard"
         >
           <div className={classes.icon}>
-            <DashboardIcon />
+            <HomeIcon />
           </div>
           Dashboard
         </Button>
       </ListItem>
-      <ListItem className={classes.item} disableGutters key="Operadores">
+      <ListItem className={classes.item} disableGutters key="Buscar">
         <Button
           activeClassName={classes.active}
           className={classes.button}
@@ -86,9 +88,35 @@ const SidebarNav = (props) => {
           to="/operadores"
         >
           <div className={classes.icon}>
-            <PersonIcon />
+            <SearchIcon />
           </div>
-          Operadores
+          Buscar
+        </Button>
+      </ListItem>
+      <ListItem className={classes.item} disableGutters key="Buscar">
+        <Button
+          activeClassName={classes.active}
+          className={classes.button}
+          component={CustomRouterLink}
+          to="/operadores"
+        >
+          <div className={classes.icon}>
+            <ViewModuleIcon />
+          </div>
+          Cards
+        </Button>
+      </ListItem>
+      <ListItem className={classes.item} disableGutters key="Buscar">
+        <Button
+          activeClassName={classes.active}
+          className={classes.button}
+          component={CustomRouterLink}
+          to="/operadores"
+        >
+          <div className={classes.icon}>
+            <PermIdentityIcon />
+          </div>
+          Perfil
         </Button>
       </ListItem>
       <Hidden lgUp>

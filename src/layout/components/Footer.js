@@ -6,10 +6,11 @@ import { Typography, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: theme.spacing(4),
+    paddingBottom: theme.spacing(4),
+    paddingRight: theme.spacing(4),
+    paddingLeft: theme.spacing(4),
+    paddingTop: theme.spacing(1),
     background: "#f4f6f8",
-    position: "absolute",
-    bottom: 0,
   },
 }));
 
