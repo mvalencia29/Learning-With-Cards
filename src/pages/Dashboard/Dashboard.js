@@ -5,7 +5,7 @@ import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 import { makeStyles } from "@material-ui/core/styles";
-import Main from "../../layouts/Main/Main";
+import Main from "../../layout/Main";
 
 const useStyles = makeStyles({
   root: {
